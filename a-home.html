@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<head>
+
+    <link rel="stylesheet" href="css files/a-main.css">
+    <link rel="stylesheet" href="css files/b-firstpage.css">
+    <link rel="stylesheet" href="css files/a1-navbar.css">
+    <link rel="icon" type="image/x-icon" href="media-files/SeaYum-Tab-Logo.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1">
+
+    <title>SeaYum</title>
+
+</head>
+
+<body>
+
+    <section id=navbar">
+        <div class="navbar container">
+            <div id="navbar">
+                <a href="a-home.html" id="brandname">SeaYum</a>
+                <div id="navbar-main">
+                    <a class="active" href="a-home.html">HOME</a>
+                    <a href="b-about.html">ABOUT</a>
+                    <a href="#menu">MENU</a>
+                    <a href="#order">ORDER</a>
+                    <a href="#career">CAREER</a>
+                    <a href="#contact">CONTACT</a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            window.onscroll = function () { scrollFunction() };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                    document.getElementById("navbar").style.padding = "15px 10px";
+                    document.getElementById("logo").style.fontSize = "25px";
+                } else {
+                    document.getElementById("navbar").style.padding = "30px 10px";
+                    document.getElementById("logo").style.fontSize = "35px";
+                }
+            }
+        </script>
+    </section>
+
+
+    <section id="slideshow">
+        <div class="slide container">
+            <div class="slide animation">
+                <img src="media-files/a1-home-slideshow/slideshow_1.jpg">
+            </div>
+
+            <div class="slide animation">
+                <img src="media-files/a1-home-slideshow/slideshow_2.jpg">
+            </div>
+
+            <div class="slide animation">
+                <img src="media-files/a1-home-slideshow/slideshow_3.jpg">
+            </div>
+        </div>
+
+        <!--slideshow script (javascript)-->
+
+        <script>
+            var index = 0;
+            show();
+            function show() {
+                var i;
+                var slides = document.getElementsByClassName("animation");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+
+                index = index + 1;
+                if (index > slides.length) {
+                    index = 1
+                }
+
+                slides[index - 1].style.display = "block";
+                setTimeout(show, 3500);
+            }
+        </script>
+    </section>
+
+    <section id="description">
+        <div class="description container">
+            <div id="main-content">
+                <p>
+                    This is the SeaYum's Restaurant website platform that provides food
+                    information as well as media. You can browse this website to buy or order
+                    food, or simply look at the food ingredients or steps in the preparation process.
+                    SeaYum's mission is to serve great-tasting sea foods, giving delight and safe food
+                    to everyone.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="footer container">
+            <div class="slogan">
+                <p>Foods that will make you say YUM!</p>
+            </div>
+
+            <div class="copyright">
+                <p>
+                    &#169 2021 SeaYum! All rights reserved. The SeaYum name, and logo are registered trademarks
+                    of SeaYum Ltd.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
